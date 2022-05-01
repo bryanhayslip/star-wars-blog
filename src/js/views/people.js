@@ -16,6 +16,9 @@ export const People = () => {
 	}, []);
     
     return (
-       <h1>hello {people !==null ? people.name : ""}</h1>
+       <div>
+          <h1>Name: {people !==null ? people.name : ""}</h1>
+       <h2>I'm {people !==null ? people.height : ""} inches tall</h2>
+       </div>
    ) 
 }
