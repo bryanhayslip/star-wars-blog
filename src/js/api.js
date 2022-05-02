@@ -30,3 +30,19 @@ export async function getPlanet() {
     const payload = await response.json();
     return payload.results; 
 }
+
+export async function getVehiclesByID(id) {
+    const response = await fetch(
+        "https://www.swapi.tech/api/vehicles/"+id
+    );
+    const payload = await response.json();
+    return payload.result.properties;
+}
+
+export async function getVehicles() {
+    const response = await fetch (
+        "https://www.swapi.tech/api/vehicles/"
+    );
+    const payload = await response.json();
+    return payload.results;
+}
