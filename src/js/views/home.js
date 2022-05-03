@@ -3,6 +3,7 @@ import { getPeople } from "../api";
 import { getPlanet } from "../api";
 import { getVehicles } from "../api";
 
+
 import "../../styles/home.css";
 
 export const Home = () => {
@@ -36,12 +37,14 @@ export const Home = () => {
 	}, []);
 
 	return (
-		<div className="home-page">
+		<div>
 			{/* Character card group */}
-		<div className="card-group">
+		<div className="characters">
+			<h1 className="section-header">Characters</h1>
+			<div className="d-flex flex-row flex-nowrap overflow-auto">
 					{people.map((item, index) => (
-						<div className="border border-danger m-3">
-						<div key={index} className="card-body">
+						<div className="border border-danger col-3 m-3">
+						<div key={index} className="card card-block">
 							<h5 className="card-title">{item.name}</h5>
 							<p className="card-text">Hi</p>
 							<div className="card-footer">
@@ -50,11 +53,14 @@ export const Home = () => {
 						</div>
 						</div>
 					))}
+					</div>
 				</div>
 				{/* Planets card group */}
-				<div className="card-group">
+				<div className="planets">
+				<h1 className="section-header">Planets</h1>
+				<div className="d-flex flex-row flex-nowrap overflow-auto">
 					{planet.map((item, index) => (
-						<div className="border border-success m-3">
+						<div className="border border-success col-3 m-3">
 					   <div key={index} className="card-body">
 						   <h5 className="card-title">{item.name}</h5>
 						<a href= {"/planets/" + item.uid} className="btn btn-primary">{item.name}</a>
@@ -63,22 +69,28 @@ export const Home = () => {
 					)
 					)}
 				</div>
-{/* Vehicles card group */}
- <div>
- <div className="vehicles card-group">	 
+				</div>
+
+
+	{/* Vehicles card group */}
+ 	
+ 	<div className="vehicles">	 
+	 <h1 className="section-header">Vehicles</h1>
+	 <div className="d-flex flex-row flex-nowrap overflow-auto">
 	{vehicle.map((item, index) => (
-		<div className="border border-primary m-3">
+		<div className="border border-primary col-3 m-3">
 		<div key={index} className="card-body">
 			<h5 className="card-title">{item.name}</h5>
 			<a href= {"/vehicles/" + item.uid} className="btn btn-primary">{item.name}</a>
 			</div>
 		</div>
 	))}
+	</div>
 </div> 
+
+
 </div>
-
-
-				</div>
+				
 				
 	)
 	

@@ -16,3 +16,18 @@
     overflow-y: hidden;
     white-space: nowrap;
 } */
+
+.section-header {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: red; 
+    font-style: italic;
+}
+.characters {
+    margin: 80px; 
+}
+.planets {
+    margin: 80px; 
+}
+.vehicles {
+    margin: 80px; 
+}
