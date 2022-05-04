@@ -1,3 +1,7 @@
+import { useContext } from "react/cjs/react.production.min";
+import layout from "./layout";
+import { People } from "./views/people";
+
 export async function getPeopleByID(id) {
 	const response = await fetch(
 		"https://www.swapi.tech/api/people/"+id
@@ -46,3 +50,16 @@ export async function getVehicles() {
     const payload = await response.json();
     return payload.results;
 }
+
+// favorites.js
+// export const FavoritesContext = React.createContext()
+
+// layout.js
+// const [favorites, setFavorites] = React.useState([])
+
+// return <FavoritesContext.Provider value = {}>
+//     <.../> <Layout />
+// </FavoritesContext.Provider>
+
+// people.js
+// const { favorites, setFavorites } = useContext(FavoritesContext)

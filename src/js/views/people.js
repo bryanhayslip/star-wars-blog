@@ -4,6 +4,7 @@ import { getPeopleByID } from "../api";
 
 export const People = () => {
    const [people, setPeople] = React.useState(null)
+   
     const params = useParams ()
     
     
