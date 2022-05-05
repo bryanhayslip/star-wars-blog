@@ -1,6 +1,6 @@
 import React from "react";
 import { FavoritesContext } from "../favorites";
-import rigoImage from "../../img/rigo-baby.jpg";
+
 
 export const PeopleCard = (props) => {
 
@@ -11,7 +11,7 @@ const isFavorited = favorites.includes(props.uid)
     <div className="border border-danger col-3 m-3">
       <div className="card card-block">
         <h5 className="card-title">{props.name}</h5>
-        <img src={rigoImage}></img>
+        
         <p className="card-text">Hi</p>
         <div className="card-footer">
           <a href={"/people/" + props.uid} className="btn btn-primary">
