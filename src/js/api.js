@@ -4,7 +4,7 @@ import { People } from "./views/people";
 
 export async function getPeopleByID(id) {
 	const response = await fetch(
-		"https://www.swapi.tech/api/people/"+id
+		"https://swapi.dev/api/people/"+id
 	);
 	const payload = await response.json();
 
@@ -13,7 +13,7 @@ export async function getPeopleByID(id) {
 
 export async function getPeople() {
     const response = await fetch(
-        "https://www.swapi.tech/api/people/"
+        "https://swapi.dev/api/people/"
     );
     const payload = await response.json();
     return payload.results; 
@@ -21,7 +21,7 @@ export async function getPeople() {
 
 export async function getPlanetByID(id) {
 	const response = await fetch(
-		"https://www.swapi.tech/api/planets/"+id
+		"https://swapi.dev/api/planets"+id
 	);
 	const payload = await response.json();
 
@@ -29,7 +29,7 @@ export async function getPlanetByID(id) {
 }
 export async function getPlanet() {
     const response = await fetch(
-        "https://www.swapi.tech/api/planets/"
+        "https://swapi.dev/api/planets"
     );
     const payload = await response.json();
     return payload.results; 
@@ -37,7 +37,7 @@ export async function getPlanet() {
 
 export async function getVehiclesByID(id) {
     const response = await fetch(
-        "https://www.swapi.tech/api/vehicles/"+id
+        "https://swapi.dev/api/vehicles"+id
     );
     const payload = await response.json();
     return payload.result.properties;
@@ -45,7 +45,7 @@ export async function getVehiclesByID(id) {
 
 export async function getVehicles() {
     const response = await fetch (
-        "https://www.swapi.tech/api/vehicles/"
+        "https://swapi.dev/api/vehicles"
     );
     const payload = await response.json();
     return payload.results;
