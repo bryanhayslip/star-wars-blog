@@ -22,7 +22,7 @@ const Layout = () => {
 	const [favorites, setFavorites] = React.useState([])
 
 	return (
-		<div>
+		<div className="thebody">
 			<FavoritesContext.Provider value = {{favorites, setFavorites}}>
 			<BrowserRouter basename={basename}>
 				<ScrollToTop>

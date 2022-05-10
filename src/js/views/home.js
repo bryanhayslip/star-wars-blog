@@ -55,7 +55,7 @@ export const Home = () => {
         <h1 className="section-header">Planets</h1>
         <div className="d-flex flex-row flex-nowrap overflow-auto">
           {planet.map((item, index) => (
-            <PlanetsCard name = { item.name } uid = { item.uid } key = {index}/>
+            <PlanetsCard name = { item.name } uid = { index + 1 } key = {index}/>
           ))}
         </div>
       </div>

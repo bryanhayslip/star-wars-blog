@@ -14,9 +14,9 @@ export const Navbar = () => {
       <div className="ml-5">
         {/* <button className="btn btn-primary">{`Favorites (${favorites.length})`}</button> */}
         
-        <div class="dropdown">
+        <div className="dropdown">
           <button
-            class="btn btn-secondary dropdown-toggle"
+            className="btn btn-secondary dropdown-toggle"
             type="button"
             id="dropdownMenuButton1"
             data-bs-toggle="dropdown"
@@ -24,7 +24,7 @@ export const Navbar = () => {
           >
             {`Favorites (${favorites.length})`}
           </button>
-          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
 		  {favorites.map((item, index) => {
           return (
             <li className="dropdown-item" key={index} href="#">

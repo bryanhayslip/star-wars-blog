@@ -3,15 +3,11 @@ import { useParams } from "react-router-dom";
 import { getPlanetByID } from "../api";
 
 export const Planets = () => {
-    const [planet, setPlanet] = React.useState(null)
+    const [planet, setPlanet] = React.useState({})
     const params = useParams ()
 
     React.useEffect(() => {
-		const fn = async () => {
-			const apiPlanet = await getPlanetByID(params.id);
-			setPlanet(apiPlanet);
-		};
-		fn();
+		getPlanetByID(params.id).then(info => setPlanet(info))
 	}, []);
 
     return (
