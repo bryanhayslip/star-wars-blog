@@ -46,7 +46,7 @@ export const Home = () => {
         <h1 className="section-header">Characters</h1>
         <div className="d-flex flex-row flex-nowrap overflow-auto">
           {people.map((item, index) => (
-           <PeopleCard name = { item.name } uid = { item.uid } key = {index}/>
+           <PeopleCard name = { item.name } uid = { index + 1 } key = {index}/>
           ))}
         </div>
       </div>

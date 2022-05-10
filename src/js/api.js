@@ -8,7 +8,7 @@ export async function getPeopleByID(id) {
 	);
 	const payload = await response.json();
 
-	return payload.result.properties;
+	return payload;
 }
 
 export async function getPeople() {

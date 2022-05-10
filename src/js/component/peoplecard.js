@@ -5,7 +5,7 @@ import { FavoritesContext } from "../favorites";
 export const PeopleCard = (props) => {
 
     const { favorites, setFavorites } = React.useContext(FavoritesContext);
-const isFavorited = favorites.includes(props.uid)
+const isFavorited = favorites.find((item) => item.name == props.name)
 
   return (
     <div className="border border-danger col-3 m-3">
@@ -18,11 +18,11 @@ const isFavorited = favorites.includes(props.uid)
             {props.name}
           </a>
           { isFavorited ? <button onClick={() => {
-              setFavorites(favorites.filter(uid => uid !== props.uid 
+              setFavorites(favorites.filter(object => object.name !== props.name 
               ))
           }}  className="btn btn-success">unfavorite</button> :
           <button onClick={() => {
-              setFavorites([...favorites, props.uid])
+              setFavorites([...favorites, {name: props.name, id: props.uid}])
           }} className="btn btn-warning">favorite</button>}
         </div>
       </div>
