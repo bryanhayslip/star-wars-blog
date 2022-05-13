@@ -8,9 +8,9 @@ export const VehiclesCard = (props) => {
   return (
     <div className="border border-primary col-3 m-3">
     <div className="card card-block">
-      <h5 className="card-title">{props.name}</h5>
+      <h5 className="card-title">{props.vehicle.name}</h5>
       <a href={"/vehicles/" + props.uid} className="btn btn-primary">
-        {props.name}
+        {props.vehicle.name}
       </a>
     </div>
   </div>

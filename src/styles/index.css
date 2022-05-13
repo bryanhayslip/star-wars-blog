@@ -32,3 +32,14 @@
     margin: 80px; 
 }
 
+ .left-button {
+    width: 50%; 
+} 
+
+.right-button {
+    width: 50%
+}
+/* body {
+ background-image: url("");
+} */
+

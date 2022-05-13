@@ -1,25 +1,29 @@
 import React from "react";
 import { FavoritesContext } from "../favorites";
+import Starwars from "../../img/Star-wars-logo.jpg"
 
 export const PeopleCard = (props) => {
   const { favorites, setFavorites } = React.useContext(FavoritesContext);
-  const isFavorited = favorites.find((item) => item.name == props.name);
+  const isFavorited = favorites.find((item) => item.name == props.character.name);
 
   return (
     <div className="border border-danger col-3 m-3">
       <div className="card card-block">
-        <h5 className="card-title">{props.name}</h5>
+        <h5 className="card-title">{props.character.name}</h5>
 
-        <p className="card-text">Hi</p>
-        <div className="card-footer">
+        <img src={Starwars} />
+        <div className="card-footer d-flex">
+          <div className="left-button">
           <a href={"/people/" + props.uid} className="btn btn-primary">
-            {props.name}
+            {props.character.name}
           </a>
+          </div>
+          <div className="right-button">
           {isFavorited ? (
             <button
               onClick={() => {
                 setFavorites(
-                  favorites.filter((object) => object.name !== props.name)
+                  favorites.filter((object) => object.name !== props.character.name)
                 );
               }}
               className="btn btn-success"
@@ -31,14 +35,16 @@ export const PeopleCard = (props) => {
               onClick={() => {
                 setFavorites([
                   ...favorites,
-                  { name: props.name, id: props.uid },
+                  { name: props.character.name, id: props.uid },
                 ]);
               }}
               className="btn btn-warning"
             >
               favorite
             </button>
+            
           )}
+          </div>
         </div>
       </div>
     </div>

@@ -46,7 +46,7 @@ export const Home = () => {
         <h1 className="section-header">Characters</h1>
         <div className="d-flex flex-row flex-nowrap overflow-auto">
           {people.map((item, index) => (
-           <PeopleCard name = { item.name } uid = { index + 1 } key = {index}/>
+           <PeopleCard character = { item } uid = { index + 1 } key = {index}/>
           ))}
         </div>
       </div>
@@ -55,7 +55,7 @@ export const Home = () => {
         <h1 className="section-header">Planets</h1>
         <div className="d-flex flex-row flex-nowrap overflow-auto">
           {planet.map((item, index) => (
-            <PlanetsCard name = { item.name } uid = { index + 1 } key = {index}/>
+            <PlanetsCard planet = { item } uid = { index + 1 } key = {index}/>
           ))}
         </div>
       </div>
@@ -66,7 +66,7 @@ export const Home = () => {
         <h1 className="section-header">Vehicles</h1>
         <div className="d-flex flex-row flex-nowrap overflow-auto">
           {vehicle.map((item, index) => (
-            <VehiclesCard name = { item.name } uid = { item.uid } key = {index}/>
+            <VehiclesCard vehicle = { item } uid = { item.uid } key = {index}/>
           ))}
         </div>
       </div>
